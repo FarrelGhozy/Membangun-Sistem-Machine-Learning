@@ -1,4 +1,0 @@
-Screenshot 1: Total Predictions Stat
-Grafana Panel: Stat visualization showing total prediction count
-Dashboard: fazyfif
-Query: increase(diabetes_predictions_total[1h])

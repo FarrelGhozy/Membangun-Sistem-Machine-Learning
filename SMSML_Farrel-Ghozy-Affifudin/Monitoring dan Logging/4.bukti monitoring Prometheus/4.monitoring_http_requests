@@ -1,4 +1,0 @@
-Screenshot 4: HTTP Requests Rate (diabetes_http_requests_total)
-Metric: Counter - HTTP request count by method and endpoint
-URL: http://localhost:9090/graph?g0.expr=rate(diabetes_http_requests_total[5m])
-Dashboard: fazyfif

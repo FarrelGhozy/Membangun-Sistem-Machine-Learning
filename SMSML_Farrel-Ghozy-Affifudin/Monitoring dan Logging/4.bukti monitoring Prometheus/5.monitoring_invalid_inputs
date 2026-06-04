@@ -1,4 +1,0 @@
-Screenshot 5: Invalid Inputs (diabetes_invalid_inputs_total)
-Metric: Counter - Total invalid input requests
-URL: http://localhost:9090/graph?g0.expr=increase(diabetes_invalid_inputs_total[24h])
-Dashboard: fazyfif

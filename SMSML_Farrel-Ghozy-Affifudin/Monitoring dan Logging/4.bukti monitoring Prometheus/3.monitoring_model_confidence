@@ -1,4 +1,0 @@
-Screenshot 3: Model Confidence (diabetes_model_confidence)
-Metric: Gauge - Model confidence score
-URL: http://localhost:9090/graph?g0.expr=diabetes_model_confidence
-Dashboard: fazyfif

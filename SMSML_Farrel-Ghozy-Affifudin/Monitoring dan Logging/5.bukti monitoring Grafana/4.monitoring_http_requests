@@ -1,4 +1,0 @@
-Screenshot 4: HTTP Requests Rate (Time Series)
-Grafana Panel: Time series showing HTTP request rates
-Dashboard: fazyfif
-Query: rate(diabetes_http_requests_total[5m])

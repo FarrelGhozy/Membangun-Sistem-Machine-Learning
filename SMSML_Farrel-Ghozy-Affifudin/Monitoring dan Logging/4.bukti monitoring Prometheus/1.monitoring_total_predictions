@@ -1,4 +1,0 @@
-Screenshot 1: Total Predictions (diabetes_predictions_total)
-Metric: Counter - Total number of predictions made
-URL: http://localhost:9090/graph?g0.expr=increase(diabetes_predictions_total[5m])
-Dashboard: fazyfif

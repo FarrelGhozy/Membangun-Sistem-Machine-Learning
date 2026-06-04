@@ -1,4 +1,0 @@
-Screenshot 5: Invalid Inputs Stat
-Grafana Panel: Stat showing invalid input count
-Dashboard: fazyfif
-Query: increase(diabetes_invalid_inputs_total[24h])

@@ -1,0 +1,12 @@
+# Alert Rule 2: High Error Rate
+# Alert when error rate exceeds 10% in the last 5 minutes
+
+alert: HighErrorRate
+expr: (rate(diabetes_http_requests_total{http_status=~"4..|5.."}[5m]) / rate(diabetes_http_requests_total[5m])) * 100 > 10
+for: 5m
+labels:
+  severity: critical
+  dashboard: fazyfif
+annotations:
+  summary: "High HTTP error rate detected"
+  description: "Error rate is {{ $value }}% which exceeds 10% threshold"

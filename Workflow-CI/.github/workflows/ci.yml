@@ -27,6 +27,8 @@ jobs:
 
     - name: Train model with MLflow
       id: train
+      env:
+        MLFLOW_ALLOW_FILE_STORE: "true"
       run: |
         cd MLProject
         python modelling.py
@@ -54,10 +56,12 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image from MLflow model
+      env:
+        MLFLOW_ALLOW_FILE_STORE: "true"
       run: |
         cd MLProject
         mlflow models build-docker \
-          --model-uri "models:/Diabetes_CI_Model/latest" \
+          --model-uri "runs:/${{ steps.train.outputs.RUN_ID }}/model" \
           --name "farrelghozy/diabetes-ci:latest"
 
     - name: Push Docker image to Docker Hub

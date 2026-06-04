@@ -51,6 +51,7 @@ def evaluate_model(model, X_test, y_test):
 def main():
     os.makedirs("model", exist_ok=True)
 
+    os.environ["MLFLOW_ALLOW_FILE_STORE"] = "true"
     mlflow.set_tracking_uri("file:./mlruns")
     mlflow.set_experiment("Diabetes_CI_Workflow")
 
@@ -65,7 +66,6 @@ def main():
         mlflow.sklearn.log_model(
             sk_model=model,
             artifact_path="model",
-            registered_model_name="Diabetes_CI_Model"
         )
 
         joblib.dump(model, "model/model.pkl")

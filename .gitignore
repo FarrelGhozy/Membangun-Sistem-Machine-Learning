@@ -17,7 +17,10 @@ Membangun_model/generate_screenshots.sh
 AGENTS.md
 PLANNING.md
 *.sh
-**/bukti monitoring Prometheus/*.png
-**/bukti monitoring Grafana/*.png
-**/bukti alerting Grafana/*.png
-Workflow-CI/MLProject/*.png
+*.db
+*.db-shm
+*.db-wal
+venv_mlflow/
+Membangun_model/artifact_viewer.html
+Monitoring\ dan\ Logging/1.bukti_serving_docs.png
+SMSML_Farrel-Ghozy-Affifudin/Monitoring\ dan\ Logging/1.bukti_serving_docs.png

@@ -14,3 +14,5 @@ Membangun_model/model/
 Membangun_model/mlruns/
 Membangun_model/mlflow_*.json
 Membangun_model/generate_screenshots.sh
+AGENTS.md
+PLANNING.md

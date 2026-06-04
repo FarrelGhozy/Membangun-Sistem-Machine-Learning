@@ -1,5 +1,0 @@
-# Tautan ke Docker Hub
-# Docker image: farrelghozy/diabetes-ci:latest
-# Repository: https://hub.docker.com/r/farrelghozy/diabetes-ci
-# Status: Active (test tag pushed, CI pipeline will push latest)
-# Dashboard: fazyfif

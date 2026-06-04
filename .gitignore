@@ -16,3 +16,8 @@ Membangun_model/mlflow_*.json
 Membangun_model/generate_screenshots.sh
 AGENTS.md
 PLANNING.md
+*.sh
+**/bukti monitoring Prometheus/*.png
+**/bukti monitoring Grafana/*.png
+**/bukti alerting Grafana/*.png
+Workflow-CI/MLProject/*.png

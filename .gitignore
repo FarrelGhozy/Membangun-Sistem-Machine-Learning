@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+mlruns/
+mlflow_server.log
+artifacts/
+model/
+*.pkl
+!**/diabetes_preprocessing/*.pkl
+!.gitignore
+Membangun_model/artifacts/
+Membangun_model/model/
+Membangun_model/mlruns/
+Membangun_model/mlflow_*.json
+Membangun_model/generate_screenshots.sh

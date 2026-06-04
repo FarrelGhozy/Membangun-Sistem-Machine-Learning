@@ -1,0 +1,4 @@
+Screenshot 8: Model F1 Score Stat
+Grafana Panel: Stat showing model F1 score
+Dashboard: fazyfif
+Query: diabetes_model_f1

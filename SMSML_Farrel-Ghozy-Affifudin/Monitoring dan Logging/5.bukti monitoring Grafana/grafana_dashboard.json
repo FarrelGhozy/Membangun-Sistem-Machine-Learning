@@ -1,0 +1,69 @@
+{
+  "dashboard": {
+    "title": "Diabetes Monitoring - fazyfif",
+    "tags": ["diabetes", "ml", "fazyfif"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "title": "Total Predictions",
+        "type": "stat",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "increase(diabetes_predictions_total[1h])", "legendFormat": "Predictions"}]
+      },
+      {
+        "title": "Prediction Latency (p95)",
+        "type": "stat",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "histogram_quantile(0.95, sum(rate(diabetes_prediction_latency_seconds_bucket[5m])) by (le))", "legendFormat": "p95"}]
+      },
+      {
+        "title": "Model Confidence",
+        "type": "gauge",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "diabetes_model_confidence", "legendFormat": "Confidence"}]
+      },
+      {
+        "title": "HTTP Requests Rate",
+        "type": "timeseries",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "rate(diabetes_http_requests_total[5m])", "legendFormat": "{{method}} {{endpoint}}"}]
+      },
+      {
+        "title": "Invalid Inputs",
+        "type": "stat",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "increase(diabetes_invalid_inputs_total[24h])", "legendFormat": "Invalid"}]
+      },
+      {
+        "title": "Feature Values",
+        "type": "timeseries",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "diabetes_feature_value", "legendFormat": "{{feature_name}}"}]
+      },
+      {
+        "title": "Model Accuracy",
+        "type": "stat",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "diabetes_model_accuracy", "legendFormat": "Accuracy"}]
+      },
+      {
+        "title": "Model F1 Score",
+        "type": "stat",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "diabetes_model_f1", "legendFormat": "F1"}]
+      },
+      {
+        "title": "Prediction Distribution",
+        "type": "piechart",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "diabetes_prediction_distribution", "legendFormat": "Class {{class_label}}"}]
+      },
+      {
+        "title": "API Uptime",
+        "type": "stat",
+        "datasource": "Prometheus",
+        "targets": [{"expr": "diabetes_api_uptime_seconds", "legendFormat": "Uptime"}]
+      }
+    ]
+  }
+}

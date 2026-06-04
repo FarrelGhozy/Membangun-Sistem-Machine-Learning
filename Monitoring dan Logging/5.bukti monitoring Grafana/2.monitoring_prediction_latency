@@ -1,0 +1,4 @@
+Screenshot 2: Prediction Latency (p95)
+Grafana Panel: Stat visualization showing P95 latency
+Dashboard: fazyfif
+Query: histogram_quantile(0.95, sum(rate(diabetes_prediction_latency_seconds_bucket[5m])) by (le))

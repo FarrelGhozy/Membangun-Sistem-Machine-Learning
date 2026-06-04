@@ -1,0 +1,24 @@
+# Notification 1: Email
+# Send email alert when HighPredictionLatency fires
+
+- name: email_alerts
+  type: email
+  settings:
+    addresses: farrelafif05@gmail.com
+  uploadImage: true
+
+# Notification 2: Slack
+# Send Slack notification for critical alerts
+
+- name: critical_slack
+  type: slack
+  settings:
+    url: https://hooks.slack.com/services/YOUR_WEBHOOK_URL
+
+# Notification 3: Discord
+# Send Discord notification for high error rate
+
+- name: discord_alerts
+  type: discord
+  settings:
+    url: https://discord.com/api/webhooks/YOUR_WEBHOOK_URL

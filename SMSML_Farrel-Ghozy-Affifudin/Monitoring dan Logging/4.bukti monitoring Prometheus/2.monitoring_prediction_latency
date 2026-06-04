@@ -1,0 +1,4 @@
+Screenshot 2: Prediction Latency (diabetes_prediction_latency_seconds)
+Metric: Histogram - Prediction latency distribution
+URL: http://localhost:9090/graph?g0.expr=histogram_quantile(0.95,%20sum(rate(diabetes_prediction_latency_seconds_bucket[5m]))%20by%20(le))
+Dashboard: fazyfif

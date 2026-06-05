@@ -29,7 +29,7 @@ jobs:
       id: train
       run: |
         cd MLProject
-        python modelling.py
+        mlflow run . --env-manager=local
         echo "RUN_ID=$(cat run_id.txt)" >> $GITHUB_OUTPUT
 
     - name: Upload model artifact
